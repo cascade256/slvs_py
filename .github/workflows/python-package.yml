@@ -6,10 +6,10 @@ on:
   workflow_dispatch:
 
 jobs:
-    strategy:
-      matrix:
-        python_version: [3.7, 3.8, 3.9, 3.10]
     build:
+      strategy:
+        matrix:
+          python_version: [3.7, 3.8, 3.9, 3.10]
       name: Build Python WHL package
       runs-on: ubuntu-18.04
       steps:
